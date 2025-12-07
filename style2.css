@@ -1,0 +1,179 @@
+
+
+html,body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+nav {
+    height: 100px; 
+    width:100%;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: #2178f7;
+    display: flex;
+    padding: 10px 30px;
+    position: relative;
+    z-index: 10;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+}
+
+nav ul li a {
+  color: #FAFAFA;
+  text-decoration: none;
+  font-family: "Helvetica";
+  font-size: 1.2rem;
+  display: inline-block;   /* needed for transform */
+  transition: transform 0.2s ease
+}
+nav ul li a:hover{
+    transform:scale(1.2);
+    color: #FFFFFF;
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;       /* puts it behind your text */
+  object-fit: cover;
+}
+main {
+  max-width: 1700px;     /* or 70% if you prefer a % width */
+  margin: 40px auto;    /* top/bottom 40px, auto centers left/right */
+  padding: 0 20px;      /* small breathing space inside */
+  position: relative;
+  z-index: 1;        /* keep content above video */
+  color: white;
+}
+
+h1 {
+    color: black;
+    text-align: center
+}
+p {
+  font-family: verdana;
+  font-size: 20px;
+}
+
+.logo {
+  font-size: 1.2em;
+  margin-right: auto;
+}
+
+.test {
+    align-content: right;
+}
+
+.test2 {
+    margin: auto;
+    margin-left:auto;
+    align-item:center;
+}
+
+.log img.logo {
+  height: 60px;      /* adjust size as needed */
+  width: auto;       /* keeps aspect ratio */
+  display: block;
+}
+
+
+.head {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size:100px;
+    font-family: "Helvetica";
+    color: #2178f7;
+    
+}
+
+.intro {
+    margin-top: 10px;
+    text-align: center;
+    color: #99CCFF;
+    -webkit-text-stroke: 0.35px grey
+}
+
+.welcome-box {
+  background-color: rgba(255, 255, 255, 0.9); /* hvit med litt gjennomsiktighet */
+  padding: 30px;         /* luft inni boksen *      /* hvor bred boksen skal være */
+  margin: 40px auto;     /* sentrerer boksen horisontalt */
+  border-radius: 12px;   /* avrundede hjørner */
+  text-align: center;    /* sentrerer teksten inni boksen */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* liten skygge */
+}
+
+
+.feature-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;              /* fin, enkel vertikal stabling */
+  gap: 1rem;
+}
+
+.feature {
+  display: flex;              /* ikon til venstre, tekst til høyre */
+  align-items: center;
+  gap: 1rem;
+}
+
+.feature__icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;        /* bevarer proporsjoner */
+  flex-shrink: 0;
+}
+
+.feature__body {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.feature__title {
+  margin: 0;
+  font-size: 1.125rem;
+  line-height: 1.3;
+}
+
+.feature__text {
+  margin: 0;
+  color: #555;
+}
+
+/* Responsivt: på veldig smale skjermer kan du stacke ikon over tekst om ønskelig */
+@media (max-width: 420px) {
+  .feature {
+    align-items: center;
+  }
+}
+
+/* (Valgfritt) dark mode */
+@media (prefers-color-scheme: dark) {
+  .feature { 
+    background: #131313;
+    border-color: #2a2a2a;
+  }
+  .feature__text { color: #cfcfcf; }
+}
+
+
+.outer {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically (if outer has height) */
+  text-align: left;        /* keeps text aligned left next to the icons */
+  height: 100%;            /* optional: fill parent height */
+  margin-top: 60px;
+}
