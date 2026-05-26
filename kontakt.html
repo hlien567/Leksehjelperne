@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt | Leksehjelperne</title>
+  <link rel="icon" type="image/png" sizes="any" href="logo_dark_blue.png" />
+  <link rel="shortcut icon" href="logo_dark_blue.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="logo" href="index.html"><img src="logo_dark_blue.png" alt="Leksehjelperne logo" class="logo-img"><span>Leksehjelperne</span></a>
+      <button class="nav-toggle" aria-label="Åpne meny">☰</button>
+      <div class="nav-links">
+        <a href="index.html">Hjem</a>
+        <a href="priser.html">Priser</a>
+        <a href="om-oss.html">Om oss</a>
+        <a href="kontakt.html" class="button small active-button">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">Kontakt</p>
+        <h1>Fortell oss hva du trenger hjelp med.</h1>
+        <p class="lead">Fyll ut skjemaet, så hører du fra oss. Alle forespørsler er uforpliktende, så ta gjerne kontakt selv om du bare vil utforske mulighetene.  </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container contact-grid">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/xojbpdnk" method="post">
+          <input type="hidden" name="_subject" value="Ny henvendelse fra Leksehjelperne nettsiden" />
+          <label>
+            Navn
+            <input type="text" name="navn" placeholder="Ola Nordmann" required />
+          </label>
+          <label>
+            E-post
+            <input type="email" name="epost" placeholder="din@epost.no" required />
+          </label>
+          <label>
+            Telefon
+            <input type="tel" name="telefon" placeholder="Valgfritt (anbefalt)" />
+          </label>
+          <label>
+            Hva gjelder henvendelsen?
+            <select name="tema" required>
+              <option value="">Velg tema</option>
+              <option>Ønsker å bestille premium lærer</option>
+              <option>Ønsker standard lærer</option>
+              <option>Spørsmål</option>
+              <option>Bestille samtale</option>
+            </select>
+          </label>
+          <label>
+            Fag / nivå
+            <input type="text" name="fag-niva" placeholder="F.eks. R1, R2, statistikk, ungdomsskole" />
+          </label>
+          <label>
+            Melding
+            <textarea name="melding" rows="6" placeholder="Skriv litt om hva du ønsker hjelp med"></textarea>
+          </label>
+          <label class="checkbox-label">
+            <input type="checkbox" name="personvern" id="personvern-checkbox" required />
+            Jeg samtykker til <a href="personvern.html">personvernsreglene</a>
+          </label>
+          <p class="consent-note">Du må godta personvernsreglene for å sende henvendelsen.</p>
+          <button class="button" type="submit" disabled>Send henvendelse</button>
+          <div id="contact-message" class="contact-message" aria-live="polite"></div>
+        </form>
+
+        <aside class="contact-aside">
+          <h2>Dette bør du ha med i henvendelsen</h2>
+          <ul class="check-list">
+            <li>Fag og nivå du ønsker hjelp med, for eksempel R1, R2 eller ungdomsskole</li>
+            <li>Hva du vil oppnå eller hvorfor du trenger hjelp</li>
+            <li>Ønsket undervisningsform: digitalt, fysisk eller begge deler</li>
+            <li>Hvor ofte og når du ønsker timer</li>
+            <li>Viktig tidsfrist, eksamensdato eller planlagt starttidspunkt</li>
+          </ul>
+          <p>Disse detaljene kan også tas under en eventuell samtale hvis du foretrekker det.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><p>© 2026 Leksehjelperne</p><a href="kontakt.html">Kontakt oss</a><a href="personvern.html">Personvern</a></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
